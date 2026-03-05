@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Marca — Christian Funes</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cf-navy: #0F1B3D;
+            --cf-navy-light: #1E3A8A;
+            --cf-white: #FFFFFF;
+            --cf-gold: #F59E0B;
+            --cf-gold-dark: #D97706;
+            --cf-gold-glow: rgba(245, 158, 11, 0.15);
+            --cf-blue: #2563EB;
+            --cf-blue-light: #3B82F6;
+            --cf-gray-50: #F8FAFC;
+            --cf-gray-100: #F1F5F9;
+            --cf-gray-200: #E2E8F0;
+            --cf-gray-300: #CBD5E1;
+            --cf-gray-400: #94A3B8;
+            --cf-gray-500: #64748B;
+            --cf-gray-600: #475569;
+            --cf-gray-700: #334155;
+            --cf-gray-800: #1E293B;
+            --cf-success: #10B981;
+            --cf-error: #EF4444;
+            --cf-font-heading: 'Montserrat', system-ui, sans-serif;
+            --cf-font-body: 'Inter', system-ui, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--cf-font-body);
+            background: var(--cf-white);
+            color: var(--cf-gray-800);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ========= NAV ========= */
+        .brand-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(15, 27, 61, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-nav .logo {
+            font-family: var(--cf-font-heading);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--cf-white);
+            letter-spacing: 0.5px;
+        }
+
+        .brand-nav .logo span {
+            color: var(--cf-gold);
+        }
+
+        .brand-nav .version {
+            font-size: 11px;
+            color: var(--cf-gray-400);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ========= HERO ========= */
+        .hero {
+            background: linear-gradient(165deg, var(--cf-navy) 0%, #0A1128 60%, #0D1833 100%);
+            padding: 120px 24px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -15%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--cf-gold);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: 100px;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            font-family: var(--cf-font-heading);
+            font-size: clamp(32px, 6vw, 56px);
+            font-weight: 800;
+            color: var(--cf-white);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 .gold {
+            color: var(--cf-gold);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--cf-gray-300);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* ========= SECTIONS ========= */
+        .section {
+            padding: 80px 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section.alt {
+            background: var(--cf-gray-50);
+            max-width: 100%;
+        }
+
+        .section.alt .section-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section.dark {
+            background: linear-gradient(165deg, var(--cf-navy) 0%, #0A1128 100%);
+            max-width: 100%;
+            color: var(--cf-white);
+        }
+
+        .section.dark .section-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cf-gold-dark);
+            margin-bottom: 12px;
+        }
+
+        .section.dark .section-label {
+            color: var(--cf-gold);
+        }
+
+        .section-title {
+            font-family: var(--cf-font-heading);
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 700;
+            color: var(--cf-navy);
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+
+        .section.dark .section-title {
+            color: var(--cf-white);
+        }
+
+        /* ========= IDENTITY TABLE ========= */
+        .identity-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 600px) {
+            .identity-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .identity-item {
+            background: var(--cf-gray-50);
+            border: 1px solid var(--cf-gray-200);
+            border-radius: 12px;
+            padding: 20px 24px;
+        }
+
+        .identity-item .label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--cf-gray-500);
+            margin-bottom: 6px;
+        }
+
+        .identity-item .value {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--cf-navy);
+        }
+
+        .identity-item .value em {
+            color: var(--cf-gold-dark);
+            font-style: normal;
+        }
+
+        /* ========= PILLAR CARDS ========= */
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        @media (max-width: 700px) {
+            .pillars {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pillar-card {
+            background: var(--cf-white);
+            border: 1px solid var(--cf-gray-200);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: transparent;
+            transition: background 0.4s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .pillar-card:hover::before {
+            background: linear-gradient(90deg, var(--cf-gold), var(--cf-gold-dark));
+        }
+
+        .pillar-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .pillar-card h4 {
+            font-family: var(--cf-font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--cf-navy);
+            margin-bottom: 8px;
+        }
+
+        .pillar-card p {
+            font-size: 14px;
+            color: var(--cf-gray-600);
+            line-height: 1.5;
+        }
+
+        /* ========= COLOR SWATCHES ========= */
+        .color-group {
+            margin-bottom: 40px;
+        }
+
+        .color-group h4 {
+            font-family: var(--cf-font-heading);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--cf-navy);
+            margin-bottom: 16px;
+        }
+
+        .swatches {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .swatch {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--cf-gray-200);
+            background: var(--cf-white);
+        }
+
+        .swatch-color {
+            height: 72px;
+        }
+
+        .swatch-info {
+            padding: 12px;
+        }
+
+        .swatch-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--cf-navy);
+            margin-bottom: 4px;
+        }
+
+        .swatch-hex {
+            font-size: 11px;
+            font-family: 'SF Mono', monospace;
+            color: var(--cf-gray-500);
+        }
+
+        /* ========= TYPOGRAPHY SHOWCASE ========= */
+        .type-showcase {
+            margin-bottom: 40px;
+        }
+
+        .type-specimen {
+            margin-bottom: 32px;
+            padding: 32px;
+            background: var(--cf-gray-50);
+            border-radius: 16px;
+            border: 1px solid var(--cf-gray-200);
+        }
+
+        .type-specimen .font-name {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cf-gold-dark);
+            margin-bottom: 12px;
+        }
+
+        .type-specimen.heading .sample {
+            font-family: var(--cf-font-heading);
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 800;
+            color: var(--cf-navy);
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .type-specimen.body .sample {
+            font-family: var(--cf-font-body);
+            font-size: 17px;
+            font-weight: 400;
+            color: var(--cf-gray-700);
+            line-height: 1.65;
+        }
+
+        .type-meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .type-meta span {
+            font-size: 11px;
+            background: var(--cf-white);
+            border: 1px solid var(--cf-gray-200);
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: var(--cf-gray-600);
+            font-family: 'SF Mono', monospace;
+        }
+
+        /* ========= WEIGHT TABLE ========= */
+        .weight-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+        }
+
+        .weight-table th {
+            text-align: left;
+            padding: 12px 16px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--cf-gray-500);
+            border-bottom: 2px solid var(--cf-gray-200);
+        }
+
+        .weight-table td {
+            padding: 14px 16px;
+            font-size: 14px;
+            color: var(--cf-gray-700);
+            border-bottom: 1px solid var(--cf-gray-100);
+        }
+
+        .weight-table td:first-child {
+            font-weight: 500;
+            color: var(--cf-navy);
+        }
+
+        .weight-table td code {
+            font-size: 12px;
+            background: var(--cf-gray-100);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'SF Mono', monospace;
+            color: var(--cf-gray-700);
+        }
+
+        /* ========= COMPONENT DEMOS ========= */
+        .component-demo {
+            margin-bottom: 40px;
+        }
+
+        .component-demo h4 {
+            font-family: var(--cf-font-heading);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--cf-navy);
+            margin-bottom: 16px;
+        }
+
+        .demo-box {
+            padding: 40px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .demo-box.light {
+            background: var(--cf-gray-50);
+            border: 1px solid var(--cf-gray-200);
+        }
+
+        .demo-box.dark {
+            background: linear-gradient(165deg, var(--cf-navy) 0%, #0A1128 100%);
+        }
+
+        /* Live CTA Button */
+        .demo-cta {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, var(--cf-gold) 0%, var(--cf-gold-dark) 100%);
+            color: var(--cf-navy);
+            font-family: var(--cf-font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+            letter-spacing: 0.3px;
+            animation: subtlePulse 2.5s ease-in-out infinite;
+        }
+
+        .demo-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.5);
+        }
+
+        @keyframes subtlePulse {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+            }
+
+            50% {
+                box-shadow: 0 4px 30px rgba(245, 158, 11, 0.55);
+            }
+        }
+
+        /* Live Eyebrow */
+        .demo-eyebrow {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--cf-gold);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: 100px;
+        }
+
+        /* Live Testimonial */
+        .demo-testimonial {
+            background: var(--cf-white);
+            border-radius: 16px;
+            padding: 28px 24px;
+            border-left: 4px solid var(--cf-gold);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            max-width: 500px;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .demo-testimonial:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-testimonial .quote {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--cf-gray-700);
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .demo-testimonial .quote::before {
+            content: '"';
+            font-size: 28px;
+            color: var(--cf-gold);
+            font-family: Georgia, serif;
+            line-height: 0;
+            vertical-align: -6px;
+            margin-right: 4px;
+        }
+
+        .demo-testimonial .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .demo-testimonial .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--cf-navy-light), var(--cf-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cf-white);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .demo-testimonial .name {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--cf-navy);
+        }
+
+        .demo-testimonial .result {
+            font-size: 12px;
+            color: var(--cf-success);
+            font-weight: 600;
+        }
+
+        /* ========= VOICE CARDS ========= */
+        .voice-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 600px) {
+            .voice-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .voice-card {
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--cf-gray-200);
+        }
+
+        .voice-card.do {
+            background: rgba(16, 185, 129, 0.05);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .voice-card.dont {
+            background: rgba(239, 68, 68, 0.05);
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+
+        .voice-card .card-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .voice-card.do .card-label {
+            color: var(--cf-success);
+        }
+
+        .voice-card.dont .card-label {
+            color: var(--cf-error);
+        }
+
+        .voice-card blockquote {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--cf-gray-700);
+            font-style: italic;
+            margin-bottom: 8px;
+            padding-left: 16px;
+            border-left: 2px solid var(--cf-gray-200);
+        }
+
+        /* ========= PHRASES ========= */
+        .phrase-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .phrase-list li {
+            background: var(--cf-gray-50);
+            border: 1px solid var(--cf-gray-200);
+            border-radius: 10px;
+            padding: 16px 20px;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--cf-navy);
+            font-style: italic;
+            position: relative;
+            padding-left: 36px;
+        }
+
+        .phrase-list li::before {
+            content: '⚡';
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* ========= TOKENS CODE ========= */
+        .code-block {
+            background: #0D1117;
+            border-radius: 12px;
+            padding: 24px;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .code-block pre {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #E6EDF3;
+            white-space: pre;
+        }
+
+        .code-block .comment {
+            color: #8B949E;
+        }
+
+        .code-block .property {
+            color: #79C0FF;
+        }
+
+        .code-block .value {
+            color: #A5D6FF;
+        }
+
+        .code-block .hex-val {
+            color: var(--cf-gold);
+        }
+
+        /* ========= DON'TS LIST ========= */
+        .donts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 600px) {
+            .donts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .dont-item {
+            background: rgba(239, 68, 68, 0.04);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            border-radius: 10px;
+            padding: 16px 20px;
+            font-size: 13px;
+            color: var(--cf-gray-700);
+            line-height: 1.5;
+        }
+
+        .dont-item strong {
+            color: var(--cf-error);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        /* ========= FOOTER ========= */
+        .brand-footer {
+            background: #060B1A;
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .brand-footer p {
+            font-size: 13px;
+            color: var(--cf-gray-500);
+        }
+
+        .brand-footer .version-tag {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            color: var(--cf-gold);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 100px;
+            margin-top: 12px;
+        }
+
+        /* ========= STATS ========= */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        @media (max-width: 600px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 24px 16px;
+            border-radius: 12px;
+        }
+
+        .section.dark .stat-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-card .number {
+            font-family: var(--cf-font-heading);
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--cf-gold);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-card .label {
+            font-size: 12px;
+            color: var(--cf-gray-400);
+            font-weight: 500;
+        }
+
+        /* Divider */
+        .section-divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--cf-gold), var(--cf-gold-dark));
+            margin: 0 auto 40px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="brand-nav">
+        <div class="logo">CHRISTIAN <span>FUNES</span></div>
+        <div class="version">Manual de Marca v1.0</div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">📘 Manual de Marca</div>
+            <h1>Christian <span class="gold">Funes</span></h1>
+            <p>Guía completa de identidad visual, tono de voz, y sistema de diseño para todas las comunicaciones de la
+                marca.</p>
+        </div>
+    </section>
+
+    <!-- IDENTITY -->
+    <section class="section">
+        <p class="section-label">Identidad</p>
+        <h2 class="section-title">🎯 Identidad de Marca</h2>
+
+        <div class="identity-grid">
+            <div class="identity-item">
+                <div class="label">Nombre</div>
+                <div class="value">Christian Funes</div>
+            </div>
+            <div class="identity-item">
+                <div class="label">Tagline</div>
+                <div class="value"><em>"Aprueba primero, compra después."</em></div>
+            </div>
+            <div class="identity-item">
+                <div class="label">Industria</div>
+                <div class="value">Mortgage Broker · Real Estate</div>
+            </div>
+            <div class="identity-item">
+                <div class="label">Personalidad</div>
+                <div class="value">Directo, confiable, resolutivo, transparente</div>
+            </div>
+            <div class="identity-item">
+                <div class="label">Ubicación</div>
+                <div class="value">Florida, Estados Unidos</div>
+            </div>
+            <div class="identity-item">
+                <div class="label">Mercado</div>
+                <div class="value">Hispanos en USA comprando casa</div>
+            </div>
+        </div>
+
+        <h3
+            style="font-family: var(--cf-font-heading); font-size: 20px; font-weight: 700; color: var(--cf-navy); margin-bottom: 8px;">
+            Pilares de Marca</h3>
+
+        <div class="pillars">
+            <div class="pillar-card">
+                <div class="pillar-icon">🛡️</div>
+                <h4>Certeza</h4>
+                <p>Aprobación blindada antes de ver casas. Diagnóstico real en 15 minutos, no promesas vacías.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🚀</div>
+                <h4>Velocidad</h4>
+                <p>Cierre en 21-45 días. Aprobación en 24-48 horas. Acceso directo a lenders.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🏦</div>
+                <h4>Acceso</h4>
+                <p>Programas para Self-Employed, ITIN. Lo que importa es tu flujo real, no tus taxes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLORS -->
+    <section class="section alt">
+        <div class="section-inner">
+            <p class="section-label">Visual</p>
+            <h2 class="section-title">🎨 Paleta de Colores</h2>
+
+            <div class="color-group">
+                <h4>Colores Primarios</h4>
+                <div class="swatches">
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #0F1B3D;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Navy Profundo</div>
+                            <div class="swatch-hex">#0F1B3D</div>
+                        </div>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #1E3A8A;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Navy Claro</div>
+                            <div class="swatch-hex">#1E3A8A</div>
+                        </div>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Blanco</div>
+                            <div class="swatch-hex">#FFFFFF</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-group">
+                <h4>Acento — Gold</h4>
+                <div class="swatches">
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #F59E0B;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Gold</div>
+                            <div class="swatch-hex">#F59E0B</div>
+                        </div>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #D97706;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Gold Dark</div>
+                            <div class="swatch-hex">#D97706</div>
+                        </div>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color"
+                            style="background: rgba(245,158,11,0.15); border-bottom: 1px solid #E2E8F0;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Gold Glow</div>
+                            <div class="swatch-hex">rgba(245,158,11,0.15)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-group">
+                <h4>Acento Secundario — Blue</h4>
+                <div class="swatches">
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #2563EB;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Blue</div>
+                            <div class="swatch-hex">#2563EB</div>
+                        </div>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #3B82F6;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Blue Light</div>
+                            <div class="swatch-hex">#3B82F6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-group">
+                <h4>Semánticos</h4>
+                <div class="swatches">
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #10B981;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Success</div>
+                            <div class="swatch-hex">#10B981</div>
+                        </div>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #EF4444;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Error</div>
+                            <div class="swatch-hex">#EF4444</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-group">
+                <h4>Escala de Grises</h4>
+                <div class="swatches">
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #F8FAFC; border-bottom: 1px solid #E2E8F0;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Gray 50</div>
+                            <div class="swatch-hex">#F8FAFC</div>
+                        </div>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #94A3B8;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Gray 400</div>
+                            <div class="swatch-hex">#94A3B8</div>
+                        </div>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #64748B;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Gray 500</div>
+                            <div class="swatch-hex">#64748B</div>
+                        </div>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background: #1E293B;"></div>
+                        <div class="swatch-info">
+                            <div class="swatch-name">Gray 800</div>
+                            <div class="swatch-hex">#1E293B</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                style="background: var(--cf-gray-100); border: 1px solid var(--cf-gray-200); border-radius: 12px; padding: 20px 24px; margin-top: 24px;">
+                <p style="font-size: 14px; color: var(--cf-gray-700); line-height: 1.6;">
+                    <strong style="color: var(--cf-navy);">Principio de Color:</strong> Autoridad con calidez. La base
+                    Navy transmite confianza financiera. El Gold aparece como acento de acción (CTAs, badges, bordes).
+                    El Gold nunca domina — es el punto de acción que guía al usuario.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="section">
+        <p class="section-label">Tipografía</p>
+        <h2 class="section-title">🔤 Sistema Tipográfico</h2>
+
+        <div class="type-showcase">
+            <div class="type-specimen heading">
+                <div class="font-name">Montserrat — Headlines</div>
+                <div class="sample">Obtén tu Poder de Compra Real</div>
+                <div class="type-meta">
+                    <span>font-weight: 800</span>
+                    <span>line-height: 1.15</span>
+                    <span>32px → 56px</span>
+                </div>
+            </div>
+
+            <div class="type-specimen body">
+                <div class="font-name">Inter — Body Text</div>
+                <div class="sample">El Realtor solo tiene las llaves. Nosotros tenemos el dinero. Aprueba primero,
+                    compra después. La diferencia entre "creer" y "saber" que puedes comprar.</div>
+                <div class="type-meta">
+                    <span>font-weight: 400</span>
+                    <span>line-height: 1.6</span>
+                    <span>16px → 17px</span>
+                </div>
+            </div>
+        </div>
+
+        <table class="weight-table">
+            <thead>
+                <tr>
+                    <th>Peso</th>
+                    <th>Fuente</th>
+                    <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Extra Bold <code>800</code></td>
+                    <td>Montserrat</td>
+                    <td>Hero h1, Closing h2, Stats numbers</td>
+                </tr>
+                <tr>
+                    <td>Bold <code>700</code></td>
+                    <td>Montserrat</td>
+                    <td>Section titles (h2), CTA buttons</td>
+                </tr>
+                <tr>
+                    <td>SemiBold <code>600</code></td>
+                    <td>Inter / Montserrat</td>
+                    <td>Labels, form labels, testimonial names</td>
+                </tr>
+                <tr>
+                    <td>Medium <code>500</code></td>
+                    <td>Inter</td>
+                    <td>Trust items, microcopy destacado</td>
+                </tr>
+                <tr>
+                    <td>Regular <code>400</code></td>
+                    <td>Inter</td>
+                    <td>Body text, subheadlines, FAQ answers</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- COMPONENTS -->
+    <section class="section alt">
+        <div class="section-inner">
+            <p class="section-label">Componentes</p>
+            <h2 class="section-title">🧩 Sistema de Componentes</h2>
+
+            <div class="component-demo">
+                <h4>CTA Principal (Gold Gradient + Pulse)</h4>
+                <div class="demo-box dark">
+                    <button class="demo-cta">⚡ QUIERO MI DIAGNÓSTICO DE 15 MIN</button>
+                    <span style="font-size: 13px; color: var(--cf-gray-400);">✅ Sin costo · Sin compromiso · Sin
+                        BS</span>
+                </div>
+            </div>
+
+            <div class="component-demo">
+                <h4>Eyebrow Badge</h4>
+                <div class="demo-box dark">
+                    <span class="demo-eyebrow">🏠 Diagnóstico Gratuito • 15 Minutos • Resultados Reales</span>
+                </div>
+            </div>
+
+            <div class="component-demo">
+                <h4>Testimonial Card</h4>
+                <div class="demo-box light">
+                    <div class="demo-testimonial">
+                        <p class="quote">Perdí 3 meses con un Realtor que me decía 'seguro calificas'. Christian me dijo
+                            la verdad en 10 minutos y cerramos en 30 días.</p>
+                        <div class="author">
+                            <div class="avatar">FM</div>
+                            <div>
+                                <div class="name">Familia Martínez</div>
+                                <div class="result">✓ Cerró en 30 días</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- VOICE -->
+    <section class="section">
+        <p class="section-label">Comunicación</p>
+        <h2 class="section-title">✍️ Tono de Voz</h2>
+
+        <div class="identity-grid" style="margin-bottom: 32px;">
+            <div class="identity-item">
+                <div class="label">Idioma</div>
+                <div class="value">Español (hispanos en USA)</div>
+            </div>
+            <div class="identity-item">
+                <div class="label">Tono</div>
+                <div class="value">Directo, honesto, resolutivo</div>
+            </div>
+            <div class="identity-item">
+                <div class="label">Perspectiva</div>
+                <div class="value">1ra persona plural + 2da persona</div>
+            </div>
+            <div class="identity-item">
+                <div class="label">Energía</div>
+                <div class="value">Confiada, urgente, empoderada</div>
+            </div>
+        </div>
+
+
+
+        <h4
+            style="font-family: var(--cf-font-heading); font-size: 16px; font-weight: 700; color: var(--cf-navy); margin-bottom: 4px;">
+            Frases Clave</h4>
+        <ul class="phrase-list">
+            <li>"Aprueba primero, compra después."</li>
+            <li>"El Realtor solo tiene las llaves. Nosotros tenemos el dinero."</li>
+            <li>"No compres una promesa. Compra una casa."</li>
+            <li>"La diferencia entre 'creer' y 'saber' que puedes comprar."</li>
+            <li>"Lo que importa es tu flujo de dinero real, no tus taxes."</li>
+        </ul>
+
+        <div class="voice-grid" style="margin-top: 32px;">
+            <div class="voice-card do">
+                <div class="card-label">✅ Así sí</div>
+                <blockquote>"Obtén tu Poder de Compra Real en 15 Minutos."</blockquote>
+                <blockquote>"Entré a ver mi casa sabiendo que ya era mía."</blockquote>
+                <blockquote>"Sin costo · Sin compromiso · Sin BS"</blockquote>
+            </div>
+            <div class="voice-card dont">
+                <div class="card-label">❌ Así no</div>
+                <blockquote>"Le ayudamos con su proceso hipotecario."</blockquote>
+                <blockquote>"Tal vez califiques para un préstamo."</blockquote>
+                <blockquote>"Sujeto a aprobación crediticia."</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATA / STATS -->
+    <section class="section dark">
+        <div class="section-inner">
+            <p class="section-label">Datos</p>
+            <h2 class="section-title">📊 Datos Clave de la Marca</h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number">200+</div>
+                    <div class="label">Familias</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">8</div>
+                    <div class="label">Años</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">15</div>
+                    <div class="label">Min Diagnóstico</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">21-45</div>
+                    <div class="label">Días Cierre</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DON'TS -->
+    <section class="section">
+        <p class="section-label">Reglas</p>
+        <h2 class="section-title">❌ Usos Incorrectos</h2>
+
+        <div class="donts-grid">
+            <div class="dont-item">
+                <strong>🚫 Otro acento que no sea Gold</strong>
+                Solo Gold (#F59E0B) y su gradiente están autorizados como acento de acción
+            </div>
+            <div class="dont-item">
+                <strong>🚫 Gold como fondo dominante</strong>
+                Es un acento de acción (CTAs, badges) — no un color de fondo
+            </div>
+            <div class="dont-item">
+                <strong>🚫 Tipografías no autorizadas</strong>
+                Solo Montserrat (headlines) e Inter (body)
+            </div>
+            <div class="dont-item">
+                <strong>🚫 Fondos planos sin gradiente</strong>
+                Las secciones oscuras usan gradientes Navy 165deg
+            </div>
+            <div class="dont-item">
+                <strong>🚫 Español formal/corporativo</strong>
+                El tono es directo, cercano, conversacional
+            </div>
+            <div class="dont-item">
+                <strong>🚫 Promesas vagas</strong>
+                Números específicos: 15 min, 200+ familias, 21-45 días
+            </div>
+            <div class="dont-item">
+                <strong>🚫 CTAs sin pulso</strong>
+                Los botones principales llevan subtlePulse
+            </div>
+            <div class="dont-item">
+                <strong>🚫 Layout > 780px</strong>
+                Mobile-first VSL, contenido estrecho para alta conversión
+            </div>
+        </div>
+    </section>
+
+    <!-- DESIGN TOKENS -->
+    <section class="section alt">
+        <div class="section-inner">
+            <p class="section-label">Desarrollo</p>
+            <h2 class="section-title">🎨 Design Tokens (CSS)</h2>
+
+            <div class="code-block">
+                <pre><span class="comment">/* ── Christian Funes Design Tokens ── */</span>
+
+:root {
+    <span class="comment">/* Colores Primarios */</span>
+    <span class="property">--cf-navy</span>: <span class="hex-val">#0F1B3D</span>;
+    <span class="property">--cf-navy-light</span>: <span class="hex-val">#1E3A8A</span>;
+    <span class="property">--cf-white</span>: <span class="hex-val">#FFFFFF</span>;
+
+    <span class="comment">/* Acento Gold */</span>
+    <span class="property">--cf-gold</span>: <span class="hex-val">#F59E0B</span>;
+    <span class="property">--cf-gold-dark</span>: <span class="hex-val">#D97706</span>;
+    <span class="property">--cf-gold-glow</span>: <span class="value">rgba(245, 158, 11, 0.15)</span>;
+
+    <span class="comment">/* Acento Blue */</span>
+    <span class="property">--cf-blue</span>: <span class="hex-val">#2563EB</span>;
+    <span class="property">--cf-blue-light</span>: <span class="hex-val">#3B82F6</span>;
+
+    <span class="comment">/* Semánticos */</span>
+    <span class="property">--cf-success</span>: <span class="hex-val">#10B981</span>;
+    <span class="property">--cf-error</span>: <span class="hex-val">#EF4444</span>;
+
+    <span class="comment">/* Tipografía */</span>
+    <span class="property">--cf-font-heading</span>: <span class="value">'Montserrat', sans-serif</span>;
+    <span class="property">--cf-font-body</span>: <span class="value">'Inter', sans-serif</span>;
+
+    <span class="comment">/* Espaciado */</span>
+    <span class="property">--cf-max-width</span>: <span class="value">720px</span>;
+    <span class="property">--cf-radius-md</span>: <span class="value">12px</span>;
+    <span class="property">--cf-radius-lg</span>: <span class="value">16px</span>;
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="brand-footer">
+        <p>Manual de Marca — Christian Funes</p>
+        <p style="margin-top: 4px;">© 2026 Todos los derechos reservados</p>
+        <div class="version-tag">v1.0 · Febrero 2026</div>
+    </footer>
+
+</body>
+
+</html>

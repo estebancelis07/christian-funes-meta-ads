@@ -1,0 +1,22 @@
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# JetBrains
+.idea/
+
+# VS Code
+.vscode/
+
+# Project specifics
+.gemini/
+.agent/
+.system_generated/
+tmp/
+node_modules/

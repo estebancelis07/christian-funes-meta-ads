@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Obtén tu Poder de Compra Real en 15 Minutos | Christian Funes</title>
+    <meta name="description"
+        content="El 80% de los tratos de casa se caen por no tener financiamiento sólido. Obtén tu aprobación blindada PRIMERO y compra con certeza total. Diagnóstico gratuito de 15 minutos.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Deja de Ver Casas que NO Puedes Comprar">
+    <meta property="og:description"
+        content="Obtén tu Poder de Compra Real en 15 Minutos. Aprueba primero, compra después.">
+    <meta property="og:image" content="[OG_IMAGE_URL]">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Deja de Ver Casas que NO Puedes Comprar">
+    <meta name="twitter:description" content="Obtén tu Poder de Compra Real en 15 Minutos.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="[CANONICAL_URL]">
+
+    <!-- Google Analytics - REEMPLAZAR G-XXXXXXXXXX -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Facebook Pixel - REEMPLAZAR CON TU PIXEL ID -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '[FACEBOOK_PIXEL_ID]');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=[FACEBOOK_PIXEL_ID]&ev=PageView&noscript=1" /></noscript>
+
+    <style>
+        /* ========================================
+           CSS RESET & BASE
+           ======================================== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Core Palette */
+            --navy: #0F1B3D;
+            --navy-light: #1E3A8A;
+            --gold: #F59E0B;
+            --gold-dark: #D97706;
+            --gold-glow: rgba(245, 158, 11, 0.15);
+            --blue: #2563EB;
+            --blue-light: #3B82F6;
+
+            /* Neutrals */
+            --white: #FFFFFF;
+            --gray-50: #F8FAFC;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-400: #94A3B8;
+            --gray-500: #64748B;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1E293B;
+
+            /* Semantic */
+            --success: #10B981;
+            --error: #EF4444;
+
+            /* Typography */
+            --font-heading: 'Montserrat', system-ui, -apple-system, sans-serif;
+            --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+            /* Spacing */
+            --section-py: 60px;
+            --container-px: 20px;
+            --max-width: 720px;
+
+            /* Radii */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+        /* ========================================
+           CONTAINER
+           ======================================== */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-px);
+        }
+
+        /* ========================================
+           SECTION 1: HERO
+           ======================================== */
+        .hero {
+            background: linear-gradient(165deg, var(--navy) 0%, #0A1128 60%, #0D1833 100%);
+            padding: 48px 0 56px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Eyebrow */
+        .eyebrow {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        /* Headline */
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .hero h1 .gold {
+            color: var(--gold);
+        }
+
+        .hero h1 .underline-gold {
+            text-decoration: underline;
+            text-decoration-color: var(--gold);
+            text-underline-offset: 6px;
+            text-decoration-thickness: 3px;
+        }
+
+        /* Subheadline */
+        .subheadline {
+            font-size: 17px;
+            line-height: 1.5;
+            color: var(--gray-300);
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+
+        .subheadline strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        /* Hero Image */
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto 28px auto;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(245, 158, 11, 0.15);
+        }
+
+        .hero-image-wrapper img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Trust Bar (below video) */
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--gray-400);
+            font-weight: 500;
+        }
+
+        .trust-item .icon {
+            font-size: 16px;
+        }
+
+        /* CTA Button */
+        .cta-btn {
+            display: block;
+            width: 100%;
+            padding: 18px 24px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--navy);
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+            letter-spacing: 0.3px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.15) 50%, transparent 70%);
+            transition: transform 0.6s;
+            transform: translateX(-100%);
+        }
+
+        .cta-btn:hover::after {
+            transform: translateX(100%);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.5);
+        }
+
+        .cta-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3);
+        }
+
+        .cta-microcopy {
+            text-align: center;
+            font-size: 13px;
+            color: var(--gray-400);
+            margin-top: 12px;
+        }
+
+        /* ========================================
+           SECTION 2: SOCIAL PROOF
+           ======================================== */
+        .social-proof {
+            background: var(--gray-50);
+            padding: var(--section-py) 0;
+        }
+
+        .section-label {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            color: var(--navy);
+            margin-bottom: 36px;
+            line-height: 1.25;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--gold);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-quote {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--gray-700);
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 32px;
+            color: var(--gold);
+            font-family: Georgia, serif;
+            line-height: 0;
+            vertical-align: -8px;
+            margin-right: 4px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--navy-light), var(--blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--navy);
+        }
+
+        .testimonial-result {
+            font-size: 13px;
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px 8px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* ========================================
+           SECTION 3: QUALIFYING FORM
+           ======================================== */
+        .form-section {
+            background: linear-gradient(165deg, var(--navy) 0%, #0A1128 100%);
+            padding: var(--section-py) 0;
+        }
+
+        .form-section .section-label {
+            color: var(--gold);
+        }
+
+        .form-section .section-title {
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .form-subtitle {
+            text-align: center;
+            font-size: 15px;
+            color: var(--gray-400);
+            margin-bottom: 32px;
+        }
+
+        .form-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            padding: 32px 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-200);
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-select {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-sm);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 16px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .form-input::placeholder {
+            color: var(--gray-500);
+        }
+
+        .form-input:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px var(--gold-glow);
+        }
+
+        .form-input.error {
+            border-color: var(--error);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+        }
+
+        .form-error {
+            font-size: 13px;
+            color: var(--error);
+            margin-top: 6px;
+            display: none;
+        }
+
+        .form-error.visible {
+            display: block;
+        }
+
+        .form-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23CBD5E1' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
+        .form-select option {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        /* Radio Group */
+        .radio-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .radio-option {
+            flex: 1;
+            position: relative;
+        }
+
+        .radio-option input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .radio-option label {
+            display: block;
+            padding: 14px 16px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-sm);
+            color: var(--gray-300);
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .radio-option input:checked+label {
+            border-color: var(--gold);
+            background: var(--gold-glow);
+            color: var(--gold);
+        }
+
+        .radio-option label:hover {
+            border-color: rgba(245, 158, 11, 0.5);
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .form-legal {
+            text-align: center;
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 16px;
+            line-height: 1.5;
+        }
+
+        /* ========================================
+           SECTION 4: FAQ
+           ======================================== */
+        .faq-section {
+            background: var(--white);
+            padding: var(--section-py) 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-body);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--navy);
+            gap: 16px;
+            transition: color 0.2s;
+        }
+
+        .faq-question:hover {
+            color: var(--blue);
+        }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--navy);
+            flex-shrink: 0;
+            transition: transform 0.3s, background 0.3s, color 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 20px;
+        }
+
+        .faq-answer p {
+            font-size: 15px;
+            line-height: 1.65;
+            color: var(--gray-600);
+        }
+
+        /* ========================================
+           SECTION 5: CLOSING CTA
+           ======================================== */
+        .closing {
+            background: linear-gradient(165deg, var(--navy) 0%, #0A1128 100%);
+            padding: 64px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .closing::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .closing .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .closing h2 {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .closing h2 .gold {
+            color: var(--gold);
+        }
+
+        .closing p {
+            font-size: 16px;
+            color: var(--gray-400);
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .closing .cta-btn {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            font-size: 13px;
+            color: var(--gray-400);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+        footer {
+            background: #060B1A;
+            padding: 24px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        footer a {
+            color: var(--gray-400);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--white);
+        }
+
+        /* ========================================
+           STICKY CTA (Mobile)
+           ======================================== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 12px 16px;
+            padding-bottom: calc(12px + env(safe-area-inset-bottom));
+            background: rgba(15, 27, 61, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(245, 158, 11, 0.2);
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta .cta-btn {
+            font-size: 16px;
+            padding: 14px 20px;
+        }
+
+        /* ========================================
+           RESPONSIVE (Desktop 768px+)
+           ======================================== */
+        @media (min-width: 768px) {
+            :root {
+                --section-py: 80px;
+                --container-px: 32px;
+            }
+
+            .hero {
+                padding: 72px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .subheadline {
+                font-size: 19px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .cta-btn {
+                font-size: 20px;
+                padding: 20px 32px;
+                max-width: 480px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .stats-bar {
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 36px;
+            }
+
+            .closing h2 {
+                font-size: 40px;
+            }
+
+            .sticky-cta {
+                display: none;
+            }
+
+            .form-card {
+                padding: 40px 36px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            :root {
+                --max-width: 780px;
+            }
+
+            .hero h1 {
+                font-size: 56px;
+            }
+        }
+
+        /* ========================================
+           ANIMATIONS
+           ======================================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .animate-in:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .animate-in:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        /* Pulse for CTA */
+        @keyframes subtlePulse {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+            }
+
+            50% {
+                box-shadow: 0 4px 30px rgba(245, 158, 11, 0.55);
+            }
+        }
+
+        .cta-pulse {
+            animation: subtlePulse 2.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===========================================
+         SECTION 1: HERO + VSL
+         =========================================== -->
+    <section class="hero" id="hero">
+        <div class="container">
+
+            <div class="eyebrow">
+                🏠 Diagnóstico Gratuito • 15 Minutos • Resultados Reales
+            </div>
+
+            <h1>
+                Deja de Ver Casas que<br>
+                <span class="gold">NO</span> Puedes Comprar.<br>
+                <span class="underline-gold">Obtén tu Poder de Compra Real en 15 Minutos.</span>
+            </h1>
+
+            <p class="subheadline">
+                El Realtor solo tiene las llaves. <strong>Nosotros tenemos el dinero.</strong><br>
+                Aprueba primero, compra después.
+            </p>
+
+            <!-- Hero Image -->
+            <div class="hero-image-wrapper">
+                <img src="Gemini_Generated_Image_jbogznjbogznjbog.jpeg"
+                    alt="Christian Funes - Mortgage Broker Profesional" width="1024" height="1024" loading="eager">
+            </div>
+
+            <!-- Trust Bar -->
+            <div class="trust-bar">
+                <span class="trust-item"><span class="icon">🛡️</span> Aprobación Blindada</span>
+                <span class="trust-item"><span class="icon">🚀</span> Cierre en 21-45 Días</span>
+                <span class="trust-item"><span class="icon">🏦</span> Direct Lender Access</span>
+            </div>
+
+            <!-- CTA Primary -->
+            <a href="#formulario" class="cta-btn cta-pulse" id="cta-hero" onclick="trackCTA('hero')">
+                ⚡ QUIERO MI DIAGNÓSTICO DE 15 MIN
+            </a>
+            <p class="cta-microcopy">
+                ✅ Sin costo · Sin compromiso · Sin BS
+            </p>
+
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SECTION 2: SOCIAL PROOF
+         =========================================== -->
+    <section class="social-proof" id="prueba-social">
+        <div class="container">
+
+            <p class="section-label">Familias que Compraron con Certeza</p>
+            <h2 class="section-title">La Diferencia Entre "Creer" y "Saber"<br>que Puedes Comprar</h2>
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card animate-in">
+                <p class="testimonial-quote">
+                    Perdí 3 meses con un Realtor que me decía 'seguro calificas'. Christian me dijo la verdad en 10
+                    minutos y cerramos en 30 días.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">FM</div>
+                    <div>
+                        <div class="testimonial-name">Familia Martínez</div>
+                        <div class="testimonial-result">✓ Cerró en 30 días</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card animate-in">
+                <p class="testimonial-quote">
+                    Fui directo a la fuente. Sin intermediarios, sin promesas vacías. Entré a ver mi casa sabiendo que
+                    ya era mía.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">RG</div>
+                    <div>
+                        <div class="testimonial-name">Roberto G.</div>
+                        <div class="testimonial-result">✓ Self-Employed · Aprobado en 15 min</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card animate-in">
+                <p class="testimonial-quote">
+                    La diferencia entre 'creer' que puedes comprar y 'saber' que puedes comprar. Nunca más voy a hacer
+                    las cosas al revés.
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">CE</div>
+                    <div>
+                        <div class="testimonial-name">Carla y Esteban</div>
+                        <div class="testimonial-result">✓ Casa de $450K · 45 días</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Familias</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Años</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Días o Menos</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SECTION 3: QUALIFYING FORM
+         =========================================== -->
+    <section class="form-section" id="formulario">
+        <div class="container">
+
+            <p class="section-label">Tu Primer Paso</p>
+            <h2 class="section-title">Agenda tu Diagnóstico Gratuito de 15 Min</h2>
+            <p class="form-subtitle">Responde estas preguntas para que Christian prepare tu análisis antes de la
+                llamada.</p>
+
+            <div class="form-card">
+                <form id="lead-form" novalidate>
+
+                    <!-- Nombre -->
+                    <div class="form-group">
+                        <label class="form-label" for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre completo"
+                            required autocomplete="name">
+                        <p class="form-error" id="error-nombre">Por favor ingresa tu nombre.</p>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="form-group">
+                        <label class="form-label" for="telefono">Teléfono (WhatsApp) *</label>
+                        <input type="tel" id="telefono" name="telefono" class="form-input"
+                            placeholder="+1 (___) ___-____" required autocomplete="tel">
+                        <p class="form-error" id="error-telefono">Ingresa un número de teléfono válido.</p>
+                    </div>
+
+                    <!-- ¿Has hablado con un Realtor? -->
+                    <div class="form-group">
+                        <label class="form-label">¿Ya has hablado con un Realtor? *</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="realtor-si" name="realtor" value="si" required>
+                                <label for="realtor-si">Sí</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="realtor-no" name="realtor" value="no">
+                                <label for="realtor-no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pago mensual estimado -->
+                    <div class="form-group">
+                        <label class="form-label" for="presupuesto">¿Cuánto crees que puedes pagar mensual? *</label>
+                        <select id="presupuesto" name="presupuesto" class="form-select" required>
+                            <option value="" disabled selected>Selecciona un rango...</option>
+                            <option value="1500-2000">$1,500 - $2,000/mes</option>
+                            <option value="2000-3000">$2,000 - $3,000/mes</option>
+                            <option value="3000-4000">$3,000 - $4,000/mes</option>
+                            <option value="4000-5000">$4,000 - $5,000/mes</option>
+                            <option value="5000+">$5,000+/mes</option>
+                        </select>
+                        <p class="form-error" id="error-presupuesto">Selecciona un rango de presupuesto.</p>
+                    </div>
+
+                    <!-- Timeline -->
+                    <div class="form-group">
+                        <label class="form-label">¿Cuándo quieres mudarte? *</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="timeline-asap" name="timeline" value="asap" required>
+                                <label for="timeline-asap">Lo antes posible</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="timeline-3-6" name="timeline" value="3-6">
+                                <label for="timeline-3-6">3 – 6 meses</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="cta-btn form-submit cta-pulse" id="cta-form"
+                        onclick="trackCTA('form')">
+                        ⚡ QUIERO MI DIAGNÓSTICO GRATIS
+                    </button>
+
+                    <p class="form-legal">
+                        🔒 Tu información está segura. No compartimos tus datos.<br>
+                        Al enviar, aceptas ser contactado vía WhatsApp y teléfono.
+                    </p>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SECTION 4: FAQ
+         =========================================== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+
+            <p class="section-label">Preguntas Frecuentes</p>
+            <h2 class="section-title">Resolvemos tus Dudas</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>¿Por qué no debo ir primero con un Realtor?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Porque el Realtor no sabe si el banco te aprobará. El 80% de las ofertas se caen porque el
+                        financiamiento no estaba sólido. Nosotros blindamos tu aprobación PRIMERO. Cuando llegas con un
+                        Realtor ya con tu aprobación, eres tan poderoso como un comprador en efectivo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>¿Cuánto cuesta el diagnóstico?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Nada. Es una llamada de estrategia de 15 minutos gratuita. Te decimos exactamente cuánto te
+                        aprueban, sin costo y sin compromiso. Si no calificas, te lo decimos honestamente y te
+                        explicamos qué hacer para calificar.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>¿Puedo usar mi propio Realtor?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>¡Absolutamente! De hecho, los Realtors AMAN trabajar con nuestros clientes porque saben que son
+                        compradores serios ("Cash-like Buyers") que cierran rápido. Tú eliges tu Realtor, nosotros te
+                        damos el poder de compra.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>¿Cuánto tarda el proceso completo?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Diagnóstico en 15 minutos. Aprobación blindada en 24-48 horas. Cierre de casa en 21-45 días.
+                        Mientras otros esperan respuesta del banco, tú ya te estás mudando.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>¿Y si mi situación es difícil? (Self-Employed, ITIN)</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Con más razón. Un banco tradicional te rechazará en la semana 4. Christian te dice cómo
+                        estructurarlo en el minuto 15. Tiene acceso a programas que los bancos grandes no tocan. Lo que
+                        importa es tu flujo de dinero real, no tus taxes.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===========================================
+         SECTION 5: CLOSING CTA
+         =========================================== -->
+    <section class="closing" id="cierre">
+        <div class="container">
+
+            <h2>
+                No Compres una Promesa.<br>
+                <span class="gold">Compra una Casa.</span>
+            </h2>
+
+            <p>
+                Tienes dos opciones: Seguir dando vueltas con promesas vacías, o tener certeza total en 15 minutos.
+            </p>
+
+            <a href="#formulario" class="cta-btn cta-pulse" id="cta-closing" onclick="trackCTA('closing')">
+                ⚡ AGENDA TU DIAGNÓSTICO AHORA
+            </a>
+
+            <div class="trust-badges">
+                <span class="trust-badge">🛡️ Aprobación Blindada</span>
+                <span class="trust-badge">🚀 Cierre Rápido</span>
+                <span class="trust-badge">🏦 Direct Lender Access</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>
+                © 2026 Christian Funes. Todos los derechos reservados.<br>
+                <a href="[PRIVACY_POLICY_URL]">Política de Privacidad</a> · <a href="[TERMS_URL]">Términos de
+                    Servicio</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- STICKY CTA (Mobile) -->
+    <div class="sticky-cta" id="sticky-cta">
+        <a href="#formulario" class="cta-btn" onclick="trackCTA('sticky')">
+            ⚡ DIAGNÓSTICO GRATIS → 15 MIN
+        </a>
+    </div>
+
+
+    <script>
+        /* ========================================
+           FAQ ACCORDION
+           ======================================== */
+        document.querySelectorAll('.faq-question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var item = this.parentElement;
+                var isActive = item.classList.contains('active');
+
+                // Close all others
+                document.querySelectorAll('.faq-item.active').forEach(function (open) {
+                    open.classList.remove('active');
+                    open.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        /* ========================================
+           FORM VALIDATION
+           ======================================== */
+        var form = document.getElementById('lead-form');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var isValid = true;
+
+            // Reset errors
+            document.querySelectorAll('.form-input, .form-select').forEach(function (el) {
+                el.classList.remove('error');
+            });
+            document.querySelectorAll('.form-error').forEach(function (el) {
+                el.classList.remove('visible');
+            });
+
+            // Validate nombre
+            var nombre = document.getElementById('nombre');
+            if (!nombre.value.trim()) {
+                nombre.classList.add('error');
+                document.getElementById('error-nombre').classList.add('visible');
+                isValid = false;
+            }
+
+            // Validate teléfono (at least 10 digits)
+            var telefono = document.getElementById('telefono');
+            var phoneDigits = telefono.value.replace(/\D/g, '');
+            if (phoneDigits.length < 10) {
+                telefono.classList.add('error');
+                document.getElementById('error-telefono').classList.add('visible');
+                isValid = false;
+            }
+
+            // Validate realtor radio
+            var realtorChecked = document.querySelector('input[name="realtor"]:checked');
+            if (!realtorChecked) {
+                isValid = false;
+            }
+
+            // Validate presupuesto
+            var presupuesto = document.getElementById('presupuesto');
+            if (!presupuesto.value) {
+                presupuesto.classList.add('error');
+                document.getElementById('error-presupuesto').classList.add('visible');
+                isValid = false;
+            }
+
+            // Validate timeline radio
+            var timelineChecked = document.querySelector('input[name="timeline"]:checked');
+            if (!timelineChecked) {
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Track conversion
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        content_name: 'Diagnostico 15 Min - Christian Funes',
+                        content_category: 'Real Estate / Mortgage'
+                    });
+                }
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'generate_lead', {
+                        event_category: 'form',
+                        event_label: 'diagnostico_15min'
+                    });
+                }
+
+                /*
+                 * GHL INTEGRATION:
+                 * Option A: Redirect to GHL calendar with UTM params
+                 * window.location.href = '[GHL_CALENDAR_URL]?name=' + encodeURIComponent(nombre.value) + '&phone=' + encodeURIComponent(telefono.value) + '&utm_source=vsl&utm_medium=landing&utm_campaign=christian_funes';
+                 *
+                 * Option B: Submit to GHL webhook
+                 * fetch('[GHL_WEBHOOK_URL]', {
+                 *   method: 'POST',
+                 *   headers: { 'Content-Type': 'application/json' },
+                 *   body: JSON.stringify({
+                 *     nombre: nombre.value,
+                 *     telefono: telefono.value,
+                 *     realtor: realtorChecked.value,
+                 *     presupuesto: presupuesto.value,
+                 *     timeline: timelineChecked.value,
+                 *     utm_source: getUTM('utm_source'),
+                 *     utm_medium: getUTM('utm_medium'),
+                 *     utm_campaign: getUTM('utm_campaign')
+                 *   })
+                 * }).then(function() {
+                 *   window.location.href = '[THANK_YOU_PAGE_URL]';
+                 * });
+                 */
+
+                // Placeholder: redirect to thank-you
+                alert('✅ ¡Formulario recibido! Reemplaza este alert con la redirección a GHL.');
+                // window.location.href = '[THANK_YOU_PAGE_URL]';
+            } else {
+                // Scroll to first error
+                var firstError = document.querySelector('.form-input.error, .form-select.error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstError.focus();
+                }
+            }
+        });
+
+        /* ========================================
+           STICKY CTA (show after scrolling past hero)
+           ======================================== */
+        var stickyCta = document.getElementById('sticky-cta');
+        var heroSection = document.getElementById('hero');
+
+        window.addEventListener('scroll', function () {
+            var heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            if (window.scrollY > heroBottom - 100) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        }, { passive: true });
+
+        /* ========================================
+           SCROLL ANIMATIONS (IntersectionObserver)
+           ======================================== */
+        if ('IntersectionObserver' in window) {
+            var animItems = document.querySelectorAll('.animate-in');
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            animItems.forEach(function (item) {
+                item.style.animationPlayState = 'paused';
+                observer.observe(item);
+            });
+        }
+
+        /* ========================================
+           TRACKING HELPER
+           ======================================== */
+        function trackCTA(location) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'cta_click', {
+                    event_category: 'engagement',
+                    event_label: 'cta_' + location
+                });
+            }
+        }
+
+        /* UTM helper for form submission */
+        function getUTM(param) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param) || '';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia Meta Ads — Christian Funes 2026</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --cf-navy: #0F1B3D;
+            --cf-navy-light: #1E3A8A;
+            --cf-gold: #c8922a;
+            --cf-gold-dark: #D97706;
+            --cf-white: #FFFFFF;
+            --cf-gray-50: #F8FAFC;
+            --cf-gray-100: #F1F5F9;
+            --cf-gray-200: #E2E8F0;
+            --cf-gray-300: #CBD5E1;
+            --cf-gray-400: #94A3B8;
+            --cf-gray-800: #1E293B;
+            --cf-success: #16a34a;
+            --cf-error: #EF4444;
+            --cf-blue: #2563EB;
+            --cf-font-heading: 'Montserrat', sans-serif;
+            --cf-font-body: 'Inter', sans-serif;
+            --cf-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --cf-shadow-gold: 0 4px 20px rgba(200, 146, 42, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--cf-font-body);
+            background-color: var(--cf-gray-50);
+            color: var(--cf-gray-800);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(165deg, var(--cf-navy) 0%, #0A1128 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            border-bottom: 4px solid var(--cf-gold);
+            margin-bottom: 40px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(200, 146, 42, 0.15);
+            color: var(--cf-gold);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid rgba(200, 146, 42, 0.3);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-family: var(--cf-font-heading);
+            font-size: clamp(32px, 6vw, 52px);
+            font-weight: 800;
+            color: var(--cf-white);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: var(--cf-gold);
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .meta-item {
+            color: var(--cf-gray-300);
+            font-size: 14px;
+        }
+
+        .meta-item strong {
+            color: var(--cf-white);
+        }
+
+        .section {
+            background: var(--cf-white);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--cf-shadow-card);
+            border-left: 6px solid var(--cf-navy);
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        .section-tag {
+            color: var(--cf-gold);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        h2 {
+            font-family: var(--cf-font-heading);
+            font-size: 28px;
+            color: var(--cf-navy);
+            font-weight: 800;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        th {
+            background: var(--cf-gray-100);
+            color: var(--cf-navy);
+            text-align: left;
+            padding: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+            border-bottom: 2px solid var(--cf-gray-200);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid var(--cf-gray-100);
+            vertical-align: top;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .pill-blue {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--cf-blue);
+        }
+
+        .pill-gold {
+            background: rgba(200, 146, 42, 0.1);
+            color: var(--cf-gold);
+        }
+
+        .pill-green {
+            background: rgba(22, 163, 74, 0.1);
+            color: var(--cf-success);
+        }
+
+        .copy-card {
+            background: var(--cf-gray-50);
+            border: 1px solid var(--cf-gray-200);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .copy-label {
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--cf-navy-light);
+            margin-bottom: 12px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .copy-text {
+            font-size: 15px;
+            color: var(--cf-gray-800);
+            white-space: pre-wrap;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--cf-gray-100);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 15px;
+        }
+
+        .checklist li::before {
+            content: "☐";
+            font-size: 20px;
+            color: var(--cf-gold);
+            font-weight: bold;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .metric-card {
+            background: var(--cf-gray-50);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--cf-gray-200);
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: var(--cf-gray-400);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .metric-value {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--cf-navy);
+        }
+
+        .fillable {
+            background: rgba(200, 146, 42, 0.1);
+            color: var(--cf-gold);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .alert {
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .alert-info {
+            background: rgba(30, 58, 138, 0.05);
+            border: 1px solid rgba(30, 58, 138, 0.2);
+            color: var(--cf-navy-light);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--cf-navy);
+            color: rgba(255, 255, 255, 0.6);
+            border-radius: 30px 30px 0 0;
+        }
+
+        footer strong {
+            color: var(--cf-gold);
+        }
+
+        @media (max-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="badge">Estrategia Meta Ads 2026 — Sales Velocity System</div>
+        <h1>Plan Maestro: <span>Christian Funes</span></h1>
+        <p style="color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 auto; font-size: 17px;">
+            Sistematización de adquisición para "El Mortgage Broker de los Hispanos".
+        </p>
+        <div class="header-meta">
+            <div class="meta-item">📅 Inicio: <strong>Lunes 9 de Marzo 2026</strong></div>
+            <div class="meta-item">🎯 Objetivo: <strong>Citas Agendadas (VSL)</strong></div>
+            <div class="meta-item">💰 Presupuesto Mensual: <strong>$1,500 - $2,500</strong></div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- STEP 1: SETUP & CHECKLIST -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-tag">Paso 1: Setup Técnico</span>
+                <h2>✅ Checklist Pre-Lanzamiento</h2>
+                <p style="color:var(--cf-gray-400)">Completar ANTES del 9 de marzo. Sin esto, no hay escala.</p>
+            </div>
+
+            <ul class="checklist">
+                <li>
+                    <div>
+                        <strong>1. Verificar Meta Pixel & CAPI</strong><br>
+                        Confirmar que el Pixel ID <span class="fillable">[PIXEL_ID]</span> esté instalado en la Landing
+                        de Christian. Verificar evento "Lead" al llenar el formulario.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>2. Configurar GoHighLevel (GHL) Workflows</strong><br>
+                        • Gatillo: Formulario enviado -> Tag: [Lead] Christian Funes.<br>
+                        • Email + SMS inmediato de confirmación + Alerta a Christian/Sales Team.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>3. Audiencia de Exclusión</strong><br>
+                        Subir lista de los más de 200 clientes actuales como "Custom Audience" para no quemar
+                        presupuesto en quien ya nos conoce.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>4. Landing Page / VSL Audit</strong><br>
+                        Asegurar que el VSL de 5 minutos carga rápido y el CTA al "Diagnóstico Rayos X" es visible.
+                        Correcta instalación de UTMs.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>5. Preparar Sandbox (Campaña de Test)</strong><br>
+                        Configurar la campaña ABO con los 3 ángulos creativos listos para testear hooks.
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- STEP 2: ESTRATEGIA MVPA -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-tag">Paso 2: Minimo Viable de Adquisición</span>
+                <h2>📅 Estrategia de Lanzamiento (Semana 1-4)</h2>
+                <p style="color:var(--cf-gray-400)">Método 3:2:2 (Sandbox) + Scaling (CBO)</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Presupuesto Diario</div>
+                    <div class="metric-value">$50 - $100</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">CPL Target (Lead)</div>
+                    <div class="metric-value">$5 - $10</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Costo x Cita (Agendada)</div>
+                    <div class="metric-value">$40 - $60</div>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Campaña</th>
+                        <th>Targeting</th>
+                        <th>Configuración</th>
+                        <th>Métrica Clave</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>C01 — SANDBOX (ABO)</strong></td>
+                        <td>Broad (Geo + Edad)</td>
+                        <td>Testeo de 3 ángulos (3:2:2)</td>
+                        <td>CTR > 2% | Hooks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C02 — SCALING (CBO)</strong></td>
+                        <td>Broad + Ganadores</td>
+                        <td>Solo creativos probados</td>
+                        <td>Costo x Cita < $50</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-info">
+                <strong>Regla de Oro:</strong> El anuncio NO vende el préstamo. El anuncio vende el click al VSL. El VSL
+                vende la cita. "Creative-as-Targeting" es el núcleo.
+            </div>
+        </div>
+
+        <!-- CREATIVES & ANGLES -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-tag">Ángulos Creativos</span>
+                <h2>Contenido que Convierte</h2>
+                <p style="color:var(--cf-gray-400)">Basado en el Protocolo "Financing First"</p>
+            </div>
+
+            <div class="copy-card">
+                <span class="copy-label">Ángulo 1: Autoridad ("El Error #1")</span>
+                <p class="copy-text"><strong>Headline: 🛑 No Busques Casa Sin Ver Esto Primero</strong>
+                    <strong>Hook:</strong> La mayoría de las personas cometen el mismo error: buscan la casa primero y
+                    el dinero después.
+                    <strong>Solución:</strong> Analizo tus estados de cuenta, te digo cuánto te aprueban en 24h, y
+                    buscas sabiendo tu presupuesto real.
+                </p>
+                <span class="pill pill-blue">UGC Video</span>
+            </div>
+
+            <div class="copy-card" style="border-left: 4px solid var(--cf-gold);">
+                <span class="copy-label">Ángulo 2: Emocional ("Tu Casa Propia")</span>
+                <p class="copy-text"><strong>Headline: 🏠 Compra Casa Sin W2 — Mira Cómo</strong>
+                    <strong>Hook:</strong> Si sigues pagando renta pero piensas que el banco te dirá que no porque tus
+                    taxes no muestran lo que ganas...
+                    <strong>Solución:</strong> Programas hechos para self-employed. De pagar renta a tener llaves en 45
+                    días.
+                </p>
+                <span class="pill pill-gold">Video / Estático Mirror</span>
+            </div>
+
+            <div class="copy-card">
+                <span class="copy-label">Ángulo 3: Urgencia ("El Mes que Esperas")</span>
+                <p class="copy-text"><strong>Headline: 📊 Cada Mes Pierdes Dinero — Mira Por Qué</strong>
+                    <strong>Hook:</strong> Una casa de $400K hoy costará $420K en 6 meses. Tu renta sube, tu dinero
+                    pierde valor.
+                    <strong>Solución:</strong> Compra con la tasa de hoy, refinancia después. Gana plusvalía inmediata.
+                </p>
+                <span class="pill pill-green">Gráfico / Video Directo</span>
+            </div>
+        </div>
+
+        <!-- REPORTING & RULES -->
+        <div class="section">
+            <div class="section-header">
+                <span class="section-tag">Optimización</span>
+                <h2>Reglas de Control</h2>
+            </div>
+            <ul class="checklist">
+                <li><strong>Regla 5 Días:</strong> NO tocar la campaña los primeros 5 días. Meta necesita aprender.</li>
+                <li><strong>Regla 3x CPL:</strong> Si un anuncio gastó 3x el CPL objetivo sin leads, se pausa
+                    inmediatamente.</li>
+                <li><strong>Escala 15%:</strong> Incrementar presupuesto de Scaling un 15% cada 48h si el CPA es
+                    estable.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 <strong>Christian Funes Funds</strong> — Estrategia diseñada por <strong>Sales Velocity</strong></p>
+        <p style="font-size: 12px; margin-top: 10px; opacity: 0.7;">Confidencial · Sistema "Financing First" Integrado
+        </p>
+    </footer>
+
+</body>
+
+</html>
