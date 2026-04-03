@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Velocity Report — Christian Funes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card: #141414;
+            --primary: #7c3aed;
+            --secondary: #00DBDE;
+            --text: #ffffff;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --gold: #FFD700;
+            --border: rgba(255, 255, 255, 0.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding-bottom: 100px; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* Header */
+        .header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px; border-bottom: 1px solid var(--border); padding-bottom: 30px; }
+        .ag-meta { font-family: 'Outfit'; font-size: 0.7rem; letter-spacing: 5px; color: var(--primary); text-transform: uppercase; margin-bottom: 10px; }
+        .header h1 { font-family: 'Outfit'; font-size: 2.8rem; letter-spacing: -1px; }
+
+        .baseline-badge { background: rgba(0, 219, 222, 0.1); color: var(--secondary); padding: 5px 15px; border-radius: 4px; font-size: 0.7rem; font-weight: 900; letter-spacing: 2px; }
+
+        /* KPI Cards */
+        .section-title { font-family: 'Outfit'; font-size: 1.5rem; margin: 60px 0 30px; display: flex; align-items: center; gap: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .section-title::after { content: ''; height: 1px; flex-grow: 1; background: var(--border); }
+
+        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .kpi-card { background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: 20px; position: relative; }
+        .kpi-label { font-size: 0.7rem; opacity: 0.4; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block; }
+        .kpi-value { font-size: 2.2rem; font-weight: 800; font-family: 'Outfit'; color: var(--primary); }
+        .kpi-status { font-size: 0.7rem; margin-top: 10px; font-weight: 600; }
+
+        /* Tables */
+        .data-table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 20px; overflow: hidden; margin-top: 20px; }
+        .data-table th, .data-table td { padding: 20px; text-align: left; border-bottom: 1px solid var(--border); }
+        .data-table th { background: rgba(255,255,255,0.03); font-size: 0.7rem; opacity: 0.5; text-transform: uppercase; }
+        .data-table tr:last-child td { border-bottom: none; }
+
+        /* Quality Segments */
+        .quality-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .q-bar-container { height: 40px; background: rgba(255,255,255,0.03); border-radius: 10px; overflow: hidden; display: flex; }
+        .q-seg { display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; color: #000; }
+
+        /* Actions */
+        .action-list { display: grid; gap: 20px; }
+        .action-item { background: var(--card); border-left: 5px solid var(--primary); padding: 30px; border-radius: 12px; }
+        .action-item.p1 { border-left-color: var(--danger); }
+        .action-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .fade { animation: fadeIn 0.8s ease forwards; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container fade">
+        <header class="header">
+            <div>
+                <p class="ag-meta">Sales Velocity Report x Antigravity</p>
+                <h1>Christian Funes</h1>
+                <p style="opacity: 0.4; margin-top: 5px;">Abril 2, 2026 — <span class="baseline-badge">BASELINE REPORT</span></p>
+            </div>
+            <div style="text-align: right">
+                <p style="font-size: 0.8rem; opacity: 0.6;">Report #001</p>
+                <div style="background: var(--success); width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 5px;"></div>
+                <span style="font-weight: 800; font-size: 1rem;">HEALTHY SCALING</span>
+            </div>
+        </header>
+
+        <!-- 01 — Veredicto Ejecutivo -->
+        <h2 class="section-title">01 — Veredicto Ejecutivo</h2>
+        <div style="background: rgba(124, 58, 237, 0.05); border: 1px solid var(--primary); padding: 40px; border-radius: 28px; margin-bottom: 40px;">
+            <p style="font-size: 1.1rem; border-left: 3px solid var(--primary); padding-left: 25px;">
+                Semana de <strong>Escalamiento Saludable</strong>. Hemos identificado un anuncio ganador ("Renta") que está operando al 62% del presupuesto total con un CPL de **$6.82**, muy por debajo del benchmark de $15. Sin embargo, existe una fuga de intención en los anuncios de alto CTR pero 0 conversión. El pipeline de GHL ha crecido a **101 registros totales**, demostrando una integridad de tracking del 94%. 🟢
+            </p>
+        </div>
+
+        <!-- 02 — KPIs Consolidados (BASELINE) -->
+        <h2 class="section-title">02 — KPIs Consolidados (7D)</h2>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <span class="kpi-label">Leads Meta (Total)</span>
+                <p class="kpi-value">50</p>
+                <p class="kpi-status" style="color:var(--success)">BASELINE TARGET</p>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">Cost per Lead (CPL)</span>
+                <p class="kpi-value" style="color:var(--secondary)">$6.82</p>
+                <p class="kpi-status">OBJ: < $15.00 ✅</p>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">CTR Hook Average</span>
+                <p class="kpi-value">3.61%</p>
+                <p class="kpi-status">ALTO INTERÉS</p>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">Lead → Appointment</span>
+                <p class="kpi-value">25.5%</p>
+                <p class="kpi-status" style="color:var(--warning)">POR MEJORAR (OBJ 30%)</p>
+            </div>
+        </div>
+
+        <!-- 03 — Desglose por Anuncio -->
+        <h2 class="section-title">03 — Desglose por Anuncio</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Creativo</th>
+                    <th>Status</th>
+                    <th>Spend</th>
+                    <th>CTR</th>
+                    <th>Leads</th>
+                    <th>CPL</th>
+                    <th>Análisis Antigravity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: rgba(16, 185, 129, 0.05);">
+                    <td><strong>Ad "Si sigues pagando renta..."</strong></td>
+                    <td style="color:var(--success)">ACTIVE</td>
+                    <td>$341.29</td>
+                    <td>3.81%</td>
+                    <td>50</td>
+                    <td>$6.82</td>
+                    <td><span style="color:var(--success)">✓ WINNER</span>. Escalar presupuesto.</td>
+                </tr>
+                <tr>
+                    <td>Ad "La mayoría de personas..."</td>
+                    <td style="color:var(--warning)">ACTIVE</td>
+                    <td>$8.84</td>
+                    <td><span style="color:var(--success)">5.59%</span></td>
+                    <td>0</td>
+                    <td>-</td>
+                    <td>⚠️ Hook fuerte, oferta débil. Fricción alta.</td>
+                </tr>
+                <tr>
+                    <td>Ad "Si estás esperando..."</td>
+                    <td style="opacity:0.4">LEARNING</td>
+                    <td>$0.03</td>
+                    <td>0%</td>
+                    <td>0</td>
+                    <td>-</td>
+                    <td>Gasto mínimo. Meta sin distribución.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 04 — Correlación Meta → Pipeline GHL -->
+        <h2 class="section-title">04 — Salud del Pipeline (GHL Correlation)</h2>
+        <div class="quality-row">
+            <div class="kpi-card" style="grid-column: span 2;">
+                <p class="kpi-label">Distribución de Calidad por Etapa (101 leads)</p>
+                <div class="q-bar-container">
+                    <div class="q-seg" style="width: 20%; background: var(--success);">20% CALIFICADO</div>
+                    <div class="q-seg" style="width: 35%; background: var(--warning);">35% PENDIENTE</div>
+                    <div class="q-seg" style="width: 45%; background: var(--danger);">45% FRÍO/DESCALIF.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 06 — Acciones Prioritarias -->
+        <h2 class="section-title">06 — Acciones Prioritarias (Paso 7 Workflow)</h2>
+        <div class="action-list">
+            <div class="action-item p1">
+                <div class="action-header">
+                    <h3>01. Rescate de C1 (Limbo de Ventas)</h3>
+                    <span class="baseline-badge">P1 URGENTE</span>
+                </div>
+                <p><strong>Responsable:</strong> Esteban | <strong>Deadline:</strong> En 24h</p>
+                <p style="margin-top: 10px; opacity:0.8;">Hay 19 leads estancados en C1. La probabilidad de cierre cae un 50% después de 48h. Acción: Barrido de llamadas y WhatsApp de rescate.</p>
+            </div>
+            <div class="action-item">
+                <div class="action-header">
+                    <h3>02. Implementar Filtro de Score</h3>
+                    <span class="baseline-badge" style="background:rgba(124, 58, 237,0.1); color:var(--primary)">P2 ALTO</span>
+                </div>
+                <p><strong>Responsable:</strong> Antigravity | <strong>Deadline:</strong> Próximo Lunes</p>
+                <p style="margin-top: 10px; opacity:0.8;">Para reducir el 21% de "No Califica", añadir el filtro de score > 580 en el formulario GHL y mención en copy.</p>
+            </div>
+        </div>
+
+        <footer>
+            Generado por Antigravity | Salesforce Efficiency christian-funes-baseline
+        </footer>
+    </div>
+
+    <!-- JSON DATA BLOCK FOR FUTURE PARSING (Step 9 Workflow) -->
+    <script type="application/json" id="review-data">
+    {
+        "report_id": "001",
+        "date": "2026-04-02",
+        "client": "Christian Funes",
+        "meta": {
+            "leads": 50,
+            "spend": 350.16,
+            "cpl": 7.00,
+            "winner_ad_id": "120242494891610282"
+        },
+        "ghl": {
+            "total_opps": 101,
+            "appointments": 18,
+            "offers": 2,
+            "qual_rate": 0.20
+        }
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deja de Ver Casas que NO Puedes Comprar — Christian Funes</title>
+    <meta name="description" content="Descubre el Método Financing First: aprueba primero, compra después. Christian Funes, Mortgage Broker especializado en hispanos en USA. 200+ familias atendidas.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+           [Custom CSS] — Pegar en Page Settings > Custom CSS en GHL
+           ======================================== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cf-navy: #0F1B3D;
+            --cf-navy-light: #1E3A8A;
+            --cf-white: #FFFFFF;
+            --cf-gold: #F59E0B;
+            --cf-gold-dark: #D97706;
+            --cf-gold-glow: rgba(245, 158, 11, 0.15);
+            --cf-blue: #2563EB;
+            --cf-blue-light: #3B82F6;
+            --cf-gray-50: #F8FAFC;
+            --cf-gray-100: #F1F5F9;
+            --cf-gray-200: #E2E8F0;
+            --cf-gray-300: #CBD5E1;
+            --cf-gray-400: #94A3B8;
+            --cf-gray-500: #64748B;
+            --cf-gray-600: #475569;
+            --cf-gray-700: #334155;
+            --cf-gray-800: #1E293B;
+            --cf-success: #10B981;
+            --cf-error: #EF4444;
+            --cf-font-heading: 'Montserrat', system-ui, sans-serif;
+            --cf-font-body: 'Inter', system-ui, sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--cf-font-body);
+            color: var(--cf-gray-800);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background: var(--cf-white);
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ========= HERO ========= */
+        .hero {
+            background: #0A1128;
+            padding: 56px 20px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--cf-gold);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: var(--cf-font-heading);
+            font-size: clamp(30px, 6.5vw, 52px);
+            font-weight: 800;
+            color: var(--cf-white);
+            line-height: 1.12;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 .gold {
+            color: var(--cf-gold);
+        }
+
+        .hero .subtitle {
+            font-size: 18px;
+            color: var(--cf-gray-300);
+            max-width: 560px;
+            margin: 0 auto 8px; /* Tighter gap */
+            line-height: 1.65;
+            font-weight: 400;
+        }
+
+        .hero .subtitle strong {
+            color: var(--cf-gold);
+            font-weight: 600;
+        }
+
+        /* ========= VIDEO SECTION ========= */
+        .video-section {
+            background: #0A1128;
+            padding: 0 20px 32px;
+        }
+
+        .video-wrapper {
+            max-width: 720px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            aspect-ratio: 16 / 9;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(245, 158, 11, 0.15);
+            background: #000;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            object-fit: cover;
+        }
+
+        /* ========= CTA POST-HERO ========= */
+        .cta-section {
+            background: #0A1128;
+            padding: 0 20px 56px;
+            text-align: center;
+        }
+
+        .cta-section .container {
+            max-width: 500px;
+        }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            padding: 20px 24px;
+            background: linear-gradient(135deg, var(--cf-gold) 0%, var(--cf-gold-dark) 100%);
+            color: var(--cf-navy);
+            font-family: var(--cf-font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+            letter-spacing: 0.3px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            animation: subtlePulse 2.5s ease-in-out infinite;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.5);
+        }
+
+        @keyframes subtlePulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35); }
+            50% { box-shadow: 0 4px 30px rgba(245, 158, 11, 0.55); }
+        }
+
+        .cta-sub {
+            font-size: 12px;
+            color: var(--cf-gray-500);
+            margin-top: 12px;
+            letter-spacing: 0.3px;
+        }
+
+        /* ========= SOCIAL PROOF ========= */
+        .social-proof {
+            background: var(--cf-gray-50);
+            padding: 72px 20px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cf-gold);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: var(--cf-font-heading);
+            font-size: clamp(24px, 5vw, 36px);
+            font-weight: 700;
+            color: var(--cf-gray-800);
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+
+        .section-title .gold { color: var(--cf-gold); }
+
+        .testimonials {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .testimonial-card {
+            background: var(--cf-white);
+            border-radius: 16px;
+            padding: 28px 24px;
+            border-left: 4px solid var(--cf-gold);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--cf-navy) 0%, var(--cf-navy-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cf-white);
+            font-family: var(--cf-font-heading);
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .testimonial-info h4 {
+            font-family: var(--cf-font-heading);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--cf-gray-800);
+        }
+
+        .testimonial-info span {
+            font-size: 12px;
+            color: var(--cf-gray-500);
+        }
+
+        .testimonial-quote {
+            font-size: 15px;
+            color: var(--cf-gray-700);
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .testimonial-result {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            padding: 6px 14px;
+            background: rgba(16, 185, 129, 0.08);
+            border-radius: 100px;
+            color: var(--cf-success);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            max-width: 720px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px 8px;
+            background: var(--cf-white);
+            border-radius: 12px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        .stat-number {
+            font-family: var(--cf-font-heading);
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--cf-navy);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--cf-gray-500);
+            margin-top: 2px;
+        }
+
+        /* ========= METHOD: FINANCING FIRST ========= */
+        .method {
+            background: var(--cf-white);
+            padding: 72px 20px;
+        }
+
+        .steps {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .step-card {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 24px;
+            background: var(--cf-gray-50);
+            border-radius: 16px;
+            border: 1px solid var(--cf-gray-200);
+            transition: transform 0.2s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--cf-gold) 0%, var(--cf-gold-dark) 100%);
+            color: var(--cf-navy);
+            font-family: var(--cf-font-heading);
+            font-size: 20px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-family: var(--cf-font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--cf-navy);
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 15px;
+            color: var(--cf-gray-600);
+            line-height: 1.6;
+        }
+
+        .step-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 3px 10px;
+            border-radius: 100px;
+            margin-top: 8px;
+        }
+
+        .step-badge.time {
+            background: rgba(37, 99, 235, 0.08);
+            color: var(--cf-blue);
+        }
+
+        /* ========= FAQ ========= */
+        .faq {
+            background: var(--cf-gray-50);
+            padding: 72px 20px;
+        }
+
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--cf-gray-200);
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid var(--cf-gray-200);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: var(--cf-font-body);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--cf-navy);
+            text-align: left;
+            transition: color 0.2s;
+        }
+
+        .faq-question:hover {
+            color: var(--cf-blue);
+        }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--cf-gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 18px;
+            color: var(--cf-gray-500);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            background: var(--cf-navy);
+            color: var(--cf-white);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 20px;
+        }
+
+        .faq-answer p {
+            font-size: 15px;
+            color: var(--cf-gray-600);
+            line-height: 1.65;
+        }
+
+        /* ========= CLOSING CTA ========= */
+        .closing {
+            background: linear-gradient(165deg, var(--cf-navy) 0%, #0A1128 100%);
+            padding: 72px 20px;
+            text-align: center;
+        }
+
+        .closing .container {
+            max-width: 560px;
+        }
+
+        .closing h2 {
+            font-family: var(--cf-font-heading);
+            font-size: clamp(26px, 5vw, 40px);
+            font-weight: 800;
+            color: var(--cf-white);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .closing h2 .gold { color: var(--cf-gold); }
+
+        .closing .closing-sub {
+            font-size: 17px;
+            color: var(--cf-gray-300);
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+
+        .closing .cta-btn {
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--cf-gray-400);
+            font-weight: 500;
+        }
+
+        .trust-badge .badge-icon {
+            font-size: 16px;
+        }
+
+        /* ========= FOOTER ========= */
+        .footer {
+            background: #060B1A;
+            padding: 32px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: var(--cf-gray-500);
+        }
+
+        .footer a {
+            color: var(--cf-gray-400);
+            text-decoration: none;
+        }
+
+        .footer a:hover { color: var(--cf-gold); }
+
+        .footer .footer-links {
+            margin-top: 8px;
+        }
+
+        .footer .footer-links span {
+            margin: 0 8px;
+            color: var(--cf-gray-600);
+        }
+
+        /* ========= STICKY CTA (MOBILE) ========= */
+        .sticky-cta {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .sticky-cta {
+                display: block;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(15, 27, 61, 0.95);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                padding: 12px 16px;
+                z-index: 100;
+                border-top: 1px solid rgba(245, 158, 11, 0.2);
+            }
+
+            .sticky-cta .cta-btn {
+                font-size: 16px;
+                padding: 14px 20px;
+                animation: none;
+            }
+
+            body { padding-bottom: 72px; }
+        }
+
+        /* ========= MOBILE ========= */
+        @media (max-width: 480px) {
+            .hero { padding: 44px 16px 16px; }
+            .video-section { padding: 0 16px 32px; }
+            .cta-section { padding: 0 16px 48px; }
+            .social-proof { padding: 56px 16px; }
+            .method { padding: 56px 16px; }
+            .faq { padding: 56px 16px; }
+            .closing { padding: 56px 16px; }
+            .stats-bar { gap: 10px; }
+            .stat-number { font-size: 22px; }
+            .step-card { flex-direction: column; gap: 12px; padding: 20px; }
+            .testimonial-card { padding: 22px 18px; }
+            .trust-badges { gap: 16px; }
+        }
+
+        /* ========= GHL OVERRIDES ========= */
+        .ghl-form-wrap { background: transparent !important; border: none !important; padding: 0 !important; }
+        .ghl-form-wrap .form-builder--input { 
+            background: rgba(255, 255, 255, 0.06) !important; 
+            border: 1px solid rgba(255, 255, 255, 0.12) !important; 
+            border-radius: 10px !important; color: #FFFFFF !important; 
+            font-family: 'Inter', sans-serif !important; font-size: 16px !important; padding: 14px 16px !important;
+        }
+        .ghl-form-wrap .form-builder--input:focus { 
+            border-color: #F59E0B !important; box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15) !important; 
+        }
+        .ghl-form-wrap .hl_cta_btn, .ghl-form-wrap button[type="submit"] {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+            color: #0F1B3D !important; font-family: 'Montserrat', sans-serif !important;
+            font-size: 18px !important; font-weight: 700 !important;
+            border-radius: 12px !important; padding: 18px 24px !important; border: none !important;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ========================================
+         [Custom HTML Element] — Contenido principal
+         ======================================== -->
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="eyebrow">🏠 Método Financing First</div>
+            <h1>Deja de Ver Casas que <span class="gold">NO</span> Puedes Comprar</h1>
+            <p class="subtitle"><strong>El Realtor solo tiene las llaves.</strong> Nosotros tenemos el dinero. Descubre tu poder de compra real antes de pisar una sola propiedad.</p>
+        </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="video-section">
+        <div class="video-wrapper">
+            <!-- Video VSL YouTube (Optimized to fix Error 153) -->
+            <iframe src="https://www.youtube-nocookie.com/embed/X1ai5AD_eB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 16px;"></iframe>
+        </div>
+    </section>
+
+    <!-- CTA POST-HERO -->
+    <section class="cta-section">
+        <div class="container">
+            <a href="https://api.leadconnectorhq.com/widget/bookings/christian-funes-calendario" class="cta-btn">⚡ QUIERO MI DIAGNÓSTICO DE 15 MIN</a>
+            <p class="cta-sub">✅ Sin costo · Sin compromiso · Sin BS</p>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="social-proof">
+        <p class="section-label">Resultados Reales</p>
+        <h2 class="section-title">Familias que Compraron con <span class="gold">Certeza</span></h2>
+
+        <div class="testimonials">
+            <!-- Testimonio 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">FM</div>
+                    <div class="testimonial-info">
+                        <h4>Familia Martínez</h4>
+                        <span>Miami, FL</span>
+                    </div>
+                </div>
+                <p class="testimonial-quote">"Perdí 3 meses viendo casas que no podía pagar. Con Christian, en 24 horas supe exactamente cuánto me aprobaban. Cerré mi casa en 30 días."</p>
+                <div class="testimonial-result">✓ Cerró en 30 días</div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">RG</div>
+                    <div class="testimonial-info">
+                        <h4>Roberto G.</h4>
+                        <span>Orlando, FL</span>
+                    </div>
+                </div>
+                <p class="testimonial-quote">"Soy Self-Employed y me habían dicho que no calificaba. Christian encontró un programa alternativo. Hoy tengo mi casa propia."</p>
+                <div class="testimonial-result">✓ Self-Employed aprobado</div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">CE</div>
+                    <div class="testimonial-info">
+                        <h4>Carla y Esteban</h4>
+                        <span>Tampa, FL</span>
+                    </div>
+                </div>
+                <p class="testimonial-quote">"Nos sentíamos perdidos con tanto papeleo. Christian nos guió paso a paso. Lo mejor: sabíamos exactamente cuánto podíamos gastar antes de ver la primera casa."</p>
+                <div class="testimonial-result">✓ Primera casa propia</div>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Familias</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Años</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">45</div>
+                <div class="stat-label">Días máx. cierre</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METHOD: FINANCING FIRST -->
+    <section class="method">
+        <p class="section-label">Cómo Funciona</p>
+        <h2 class="section-title">El Método <span class="gold">"Financing First"</span></h2>
+
+        <div class="steps">
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Diagnóstico de Poder de Compra</h3>
+                    <p>En una llamada de 15 minutos analizamos tu situación financiera real. No tus taxes — tu flujo de dinero verdadero. Sabrás exactamente cuánto te van a aprobar.</p>
+                    <span class="step-badge time">⏱ 15 minutos</span>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Aprobación Blindada</h3>
+                    <p>Te pre-aprobamos con acceso directo a lenders. Tasas preferenciales, programas alternativos para Self-Employed, ITIN, primer comprador. Sales de aquí con certeza, no con promesas.</p>
+                    <span class="step-badge time">⏱ 24-48 horas</span>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Cierre Veloz</h3>
+                    <p>Con tu aprobación blindada, llegas al Realtor como Cash-like Buyer. El vendedor te toma en serio. Cierras en 21-45 días mientras otros siguen "explorando".</p>
+                    <span class="step-badge time">⏱ 21-45 días</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <p class="section-label">Preguntas Frecuentes</p>
+        <h2 class="section-title">Lo que Todos Preguntan</h2>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Por qué no debo ir primero con un Realtor?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+                <div class="faq-answer">
+                    <p>El 80% de los tratos se caen porque el comprador se enamora de una casa que no puede pagar. El Realtor solo tiene las llaves — nosotros tenemos el dinero. Si no sabes cuánto te aprueban antes de ver casas, estás perdiendo tiempo y emociones.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Cuánto me cuesta el diagnóstico?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+                <div class="faq-answer">
+                    <p>Nada. Cero. El diagnóstico de 15 minutos es completamente gratuito y sin compromiso. Te damos tu poder de compra real y tú decides si quieres continuar.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Puedo usar mi propio Realtor?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+                <div class="faq-answer">
+                    <p>¡Claro! Tu aprobación blindada funciona con cualquier Realtor. De hecho, cualquier Realtor te va a tratar mejor cuando llegues pre-aprobado — te conviertes en un comprador serio, un "Cash-like Buyer".</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>¿Y si soy Self-Employed o tengo ITIN?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+                <div class="faq-answer">
+                    <p>Tenemos programas alternativos específicos para tu situación. Lo que importa es tu flujo de dinero real, no tus taxes. Muchos de nuestros clientes son Self-Employed o usan ITIN y hoy tienen su casa propia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="closing">
+        <div class="container">
+            <h2>No Compres una Promesa.<br><span class="gold">Compra una Casa.</span></h2>
+            <p class="closing-sub">Agenda tu diagnóstico gratuito de 15 minutos y descubre tu poder de compra real hoy mismo.</p>
+            <a href="https://api.leadconnectorhq.com/widget/bookings/christian-funes-calendario" class="cta-btn">⚡ AGENDA TU DIAGNÓSTICO GRATIS</a>
+            <p class="cta-sub">✅ Sin costo · Sin compromiso · Sin BS</p>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span class="badge-icon">🛡️</span>
+                    <span>Aprobación Blindada</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span>Cierre en 21-45 Días</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="badge-icon">🏦</span>
+                    <span>Direct Lender Access</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Christian Funes · Mortgage Broker · NMLS Licensed</p>
+        <div class="footer-links">
+            <a href="https://christianfunes.com/privacidad">Privacidad</a>
+            <span>·</span>
+            <a href="https://christianfunes.com/terminos">Términos</a>
+        </div>
+    </footer>
+
+    <!-- STICKY CTA MOBILE -->
+    <div class="sticky-cta">
+        <a href="https://api.leadconnectorhq.com/widget/bookings/christian-funes-calendario" class="cta-btn">⚡ DIAGNÓSTICO GRATIS — 15 MIN</a>
+    </div>
+
+    <!-- ========================================
+         [Tracking Code - Footer] — Pegar en Settings > Tracking Code > Footer
+         ======================================== -->
+    <script>
+        // FAQ Accordion
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const wasActive = item.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            
+            // Toggle current
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Hide sticky CTA when near bottom CTA
+        const stickyCta = document.querySelector('.sticky-cta');
+        const closingSection = document.querySelector('.closing');
+
+        if (stickyCta && closingSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    stickyCta.style.opacity = entry.isIntersecting ? '0' : '1';
+                    stickyCta.style.pointerEvents = entry.isIntersecting ? 'none' : 'auto';
+                    stickyCta.style.transition = 'opacity 0.3s ease';
+                });
+            }, { threshold: 0.3 });
+            
+            observer.observe(closingSection);
+        }
+    </script>
+</body>
+</html>
